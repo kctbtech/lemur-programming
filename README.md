@@ -38,7 +38,9 @@ echo "Whatever you want to have outputted to the screen."
 However, this form of the echo command can only support strings and variables, it cannot support mathematical expressions etc.
 So, to output a mathematical expression we would write:
 math_echo 10 * 10
-That would output 100.
+But that is actually not correct surprisingly. Instead you have to write speech marks around the expression. Also you must have spaces after each part of the expression otherwise some things will not work properly:
+math_echo "10 * 10"
+This new line of code will output 100 which is the correct answer.
 There are a few other variations on the echo command but these two are the ones you would like to know first.
 
 When we want to get user input, we have to write the following:
@@ -46,6 +48,8 @@ get_num_input // We use this type of input when the players input is going to be
 get_string_input // We use this type of input when the players input is going to be treated as a string // "Whatever message appears to the player" &VariableToAssignTo // Just like said before, you will understand why the & symbol has been used later on 
 
 When structuring an if statement we do not need to indent anything but it is optional if you want to make your code look better and easy to follow.
+
+# REMEMBER: NORMAL IF STATEMENTS ONLY SUPPORT INTEGERS, EXPRESSIONS AND VARIABLES. A TOPIC LATER ON TALKS ABOUT STRING IF STATEMENTS. SCROLL DOWN A BIT TO FIND THEM.
 
 To write an if statement we would do the following:
 if (argument here)
@@ -230,5 +234,39 @@ $Task
 
 So, before calling the task, you must set the variables you will use in the task beforehand. This is a good alternative to use before I add the feature of having string and number inputs in a task's declaration.
 
+These are just the basics of Lemur. I will now post more topics that have been added to Lemur so far. Hope you enjoy them!
 
-These are all of the basics of Lemur that you will need to know. More features will soon be added. Please request them when you can! Thank you!
+## Mathmetical Operations with Variables
+A recent feature just added to v1.5 is the capability of being able to put variables into your mathematical operations.
+Here is an example program:
+assign_math &apples 40
+assign_math &bananas 50
+math_echo "&apples + &bananas"
+Please remember that you need to have the spaces and the speech marks to make the expression work. Expressions cannot work properly in Lemur without the speech marks and spaces. Speech marks are needed to tell the program not to seperate the following chunks of the code and to instead join them together as one. The spaces help the program that detects the variable names replace where the variables are with their values. Make sure you remember this as this might be what causes problems for you in your programs.
+Now to explain the program, what happens first is the variables &apples and &bananas are being declared and given a value. The lines of code show that the variables &apples and &bananas are numbers/integers and are equal to 40 and 50.
+
+Next, the program echos a value. This value is equal to both of the variables added to each other.
+The concept is very simple, you can mix numbers with variables as well. Variables that are strings cannot work in these expressions however as you cannot do "hello" + 10 or "goodbye" + 1.
+
+## String If Statements
+A string if statement is just the same as a normal if statement. But they instead support strings and variables. This is helpful in quiz games or things that require user input.
+
+To write string if statements you do the same thing as an if statement but replace the following:
+
+if becomes sif
+breakif becomes breaksif
+numbers become strings
+
+Now to show an example of a string if statement:
+
+sif "Hello" = "hello"
+echo "They are the same."
+breaksif
+
+It is quite a bad example but it shows how they work very well. You must remember to put speech marks around whatever you write in the argument except for the variables which can remain the same as they were in the normal if statements.
+
+The variables that you use must be strings and cannot be integers. This can mess up the string if statement and could confuse the compiler quite a bit.
+
+## How to Request Ideas
+To request ideas simply make an issue. I can discuss anything to do with requests there. I will not reply to requests that are rude or disrespectful in any kind of way.
+
