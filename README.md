@@ -52,7 +52,7 @@ When structuring an if statement we do not need to indent anything but it is opt
 # REMEMBER: NORMAL IF STATEMENTS ONLY SUPPORT INTEGERS, EXPRESSIONS AND VARIABLES. A TOPIC LATER ON TALKS ABOUT STRING IF STATEMENTS. SCROLL DOWN A BIT TO FIND THEM.
 
 To write an if statement we would do the following:
-if (argument here)
+if (argument here) then
 //Whatever would happen in the if statement
 breakif
 The breakif command tells the compiler that the if statement has ended.
@@ -60,7 +60,7 @@ The breakif command tells the compiler that the if statement has ended.
 In some languages, two == are used instead of = when writing an if statement. Luckily, the compiler only needs one = to work with in the argument.
 
 So, if we wanted to check if something is equal to something then we would do this:
-if (number, expression or variable) = (number, expression or variable)
+if (number, expression or variable) = (number, expression or variable) then
 //Whatever you choose to have happen here
 breakif
 
@@ -72,7 +72,6 @@ Also, when you learn about task functions, you will notice that the compiler mig
 
 At the moment, I am finding ways in which to make the compiler notice if something is a variable or not, but I think that is going to be very hard at the moment. Because of this, I am going to keep it this way.
 
-If you want to assign a value to a variable you have to write the following:
 If you want to assign a number or expression to a variable you write:
 assign_math &Variable (Number or expression goes here)
 If you want to assign a string to a variable you write:
@@ -86,16 +85,16 @@ You can also use variables in if statements. You cannot use them in expressions 
 
 Anyways, to use variables in an if statement, then you write:
 
-if &Variable = (Another &variable,  number or expression can go here)
+if &Variable = (Another &variable,  number or expression can go here) then
 //Whatever stuff is going to happen
 breakif
 
 Linking back onto if statements, you can also check if something is bigger or smaller than something else. So if you want to do that, then you write:
-if (thing here) > (thing here)
+if (thing here) > (thing here) then
 //Stuff
 breakif
 or
-if (thing here) < (thing here)
+if (thing here) < (thing here) then
 //Stuff
 breakif
 
@@ -259,7 +258,7 @@ numbers become strings
 
 Now to show an example of a string if statement:
 
-sif "Hello" = "hello"
+sif "Hello" = "hello" then
 echo "They are the same."
 breaksif
 
@@ -267,6 +266,24 @@ It is quite a bad example but it shows how they work very well. You must remembe
 
 The variables that you use must be strings and cannot be integers. This can mess up the string if statement and could confuse the compiler quite a bit.
 
-## How to Request Ideas
+## And Statements
+In v1.5, and statements were introduced. And statements can be implemented into if statements and string if statements.
+To implement an and statement into a string if or normal if statement do the following:
+if (argument) && (argument) then
+//Whatever you want to happen
+breakif
+or for a string if
+sif (argument) && (argument) then
+//Whatever you want to happen
+breaksif
+Or statements will be added soon so please keep a look out.
+
+# How to Request Ideas
 To request ideas simply make an issue. I can discuss anything to do with requests there. I will not reply to requests that are rude or disrespectful in any kind of way.
 
+# Conclusion
+Thank you if you read through all of this as that means a lot to me. I hope you learn the Lemur language and perhaps use it to solve some things every now and then.
+
+Please look to the how to request ideas section for more info.
+
+Otherwise, goodbye!
