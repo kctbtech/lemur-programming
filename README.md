@@ -2,6 +2,7 @@
 A programming language fully designed with python. More details can be found on this page: https://mykbtech.weebly.com/lemur-programming.html
 
 # Getting Lemur on My Computer
+QUICK DISCLAIMER: v1.5 has been taken down as some new features need to be added. v1.4 can still be used however.
 First of all, you will need to have python IDLE installed. It must be version 3.6.4 or newer. If you have that done, you must make sure to have a text editing program on your computer.
 Got both! Great!
 So, first of all, download version 1.5 or above of the Lemur programming language. Simply click on the file name and you should be able to do it from there!
